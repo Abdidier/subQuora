@@ -3,17 +3,19 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose') 
-const home = require('./routes/home')
-const signup = require('./routes/signup')
+
+const registerRouter = require('./routes/signup')
+const loginRouter = require('./routes/signin')
 
 app.set('view engine', 'hbs')  // setting up the view engine
 
-app.use(express.static('static'))
-app.use('/signup', signup)
-app.use('/home', home)
+app.use(express.static('static'))  //setting up static assets
 
-app.get('/', (req, res) => {
-    res.render('index')
+app.use('/signup', registerRouter)
+app.use('/signin', loginRouter)
+
+app.get(['/', '/home'], (req, res) => {
+    res.render('home')
 })
 
 
