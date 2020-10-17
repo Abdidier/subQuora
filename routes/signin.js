@@ -18,12 +18,13 @@ router.post('/', (req,res) => {
 
     mongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}, (err, client) => {
         const msg = 'Incorrect password'
+        const msg1 = ' Invalid Email Address'
         const db = client.db('Accounts')
         db.collection('forms')
           .findOne({ email })
-          .then(user => {
-            password == user.password ? res.redirect('/home') : res.render('login', { msg })
-        })
+          .then(user => { 
+              user == null ? res.render('login', { msg: msg1 }) : password == user.password ? res.redirect('/home') : res.render('login', { msg }) 
+            })
     })
 })
 
