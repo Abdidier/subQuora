@@ -9,7 +9,7 @@ const loginRouter = require('./routes/signin')
 
 app.set('view engine', 'hbs')  // setting up the view engine
 
-app.use(express.static('static'))  //setting up static assets
+app.use(express.static('assets'))  //setting up static assets
 
 app.use('/signup', registerRouter)
 app.use('/signin', loginRouter)
