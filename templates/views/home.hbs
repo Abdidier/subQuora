@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    {{>header}}
+
+    <div id="body">
+
+        {{>menus}}
+
+        <main>
+           {{>newCraft}}
+
+           <div id="newArticle">
+                <form action="/Article">
+                <input type="text" placeholder="Question Title">
+                <input type="text" name="Banger" placeholder="Author">
+                <textarea name="Article" cols="30" rows="10"></textarea>
+                </form>
+           </div>
+           
+        </main>
+    </div>
+  
+    {{>footer}}
+
+<script src="../js/newArticle.js"></script>
+</body>
+</html>

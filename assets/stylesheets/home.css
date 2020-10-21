@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 7vh;
+    background-color: rgb(49, 49, 49);
+}
+
+form {
+    flex: 3;
+}
+
+header>h1 {
+    flex: 2;
+    color: rgb(26, 24, 24);
+    margin: 10px;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    width: max-content;
+    height: 88vh;
+    background-color: rgb(42, 42, 42);
+}
+
+main {
+    width: 100px;
+    height: 88vh;
+    flex: 1;
+    background-color: rgb(56, 56, 56);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(61, 61, 61);
+}
+
+header>input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(226, 226, 226, 0.178);
+    background-color: rgb(53, 53, 53);
+}
+
+header>input::placeholder {
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(226, 226, 226, 0.178);
+}
+
+ul {
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+aside>ul>li>a {
+    display: block;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(121, 121, 121);
+    padding: 5px;
+}
+
+aside>ul>li>a:hover {
+    background-color: rgb(66, 62, 63);
+}
+
+footer>p {
+    color: rgb(90, 84, 84);
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#newCraft {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+main>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(41, 41, 42);
+    font-size: 70px;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(48, 48, 49);
+    cursor: pointer;
+}
+
+main>div:hover {
+    background-color: rgb(47, 47, 47);
+}
+
+#newArticle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+    width: max-content;
+    height: max-content;
+}
+
+#newArticle > form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 900px;
+}
+
+#newArticle > form > input, textarea {
+        margin:3px;
+        padding: 10px;
+        width: 600px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
